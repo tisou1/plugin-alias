@@ -9,4 +9,14 @@ function alias(options: any): Plugin {
   }
 }
 
+
+// function alias(options) {
+//   return {
+//     name: 'alias',
+//     resolveId(source, importer) {
+//       console.log('source, importer', source, importer)
+//     }
+//   }
+// }
+
 export { alias }

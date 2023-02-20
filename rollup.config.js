@@ -1,4 +1,4 @@
-import typescriptPlugin from '@rollup/plugin-typescript'
+import typescript from '@rollup/plugin-typescript'
 import { defineConfig } from 'rollup'
 import { alias }  from './src/plugins/alias'
 
@@ -8,9 +8,16 @@ export default defineConfig({
     file: 'dist/index.js',
     format: 'es'
   },
-  plugins: [typescriptPlugin({
-    module: "esnext",
+  plugins: [
+    typescript({
+      module: "esnext",
       declaration: true,
       outDir: "./dist",
-  }), alias()]
+  }),
+   alias({
+    entries: {
+      find: '!',
+      replacement: 'utils'
+    }
+  })]
 })

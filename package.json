@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "vitest",
-    "build": "rollup -c rollup.config.ts"
+    "build": "rollup -c rollup.config.js "
   },
   "keywords": [],
   "author": "",
